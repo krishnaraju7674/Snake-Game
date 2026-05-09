@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retro Snake</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main class="game-shell">
+    <section class="game-card" aria-label="Snake game">
+      <header class="game-header">
+        <div>
+          <p class="eyebrow">Classic Arcade</p>
+          <h1>Snake</h1>
+        </div>
+
+        <div class="scoreboard" aria-label="Scoreboard">
+          <div>
+            <span>Score</span>
+            <strong id="score">0</strong>
+          </div>
+          <div>
+            <span>Best</span>
+            <strong id="bestScore">0</strong>
+          </div>
+        </div>
+      </header>
+
+      <div class="board-wrap">
+        <canvas id="gameCanvas" width="480" height="480" aria-label="Snake game board"></canvas>
+
+        <div class="overlay is-visible" id="startScreen">
+          <h2>Ready?</h2>
+          <p>Eat the neon bites, grow longer, and stay out of trouble.</p>
+          <button id="startButton" type="button">Start Game</button>
+        </div>
+
+        <div class="overlay" id="gameOverScreen">
+          <h2>Game Over</h2>
+          <p>Your score: <strong id="finalScore">0</strong></p>
+          <button id="restartButton" type="button">Play Again</button>
+        </div>
+      </div>
+
+      <div class="controls-row">
+        <button id="pauseButton" class="secondary-button" type="button">Pause</button>
+        <p>Move with Arrow keys or WASD</p>
+      </div>
+
+      <div class="touch-controls" aria-label="Touch controls">
+        <button class="touch-btn up" data-direction="up" aria-label="Move up">▲</button>
+        <button class="touch-btn left" data-direction="left" aria-label="Move left">◀</button>
+        <button class="touch-btn down" data-direction="down" aria-label="Move down">▼</button>
+        <button class="touch-btn right" data-direction="right" aria-label="Move right">▶</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
